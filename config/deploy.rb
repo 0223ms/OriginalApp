@@ -2,7 +2,7 @@
 lock '3.14.1'
 
 # Capistranoのログの表示に利用する
-set :application, 'application_name'
+set :application, 'OriginalApp'
 
 # どのリポジトリからアプリをpullするかを指定する
 set :repo_url,  'git@github.com:0223ms/OriginalApp.git'
