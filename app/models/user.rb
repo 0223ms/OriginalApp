@@ -5,7 +5,7 @@ class User < ApplicationRecord
   has_many :comments
   has_many :rooms
   has_many :posts
-  has_many :likes
+  has_many :likes, dependent: :destroy
   has_many :like_posts, through: :likes, source: :post
 
    # ====================自分がフォローしているユーザーとの関連 ===================================
