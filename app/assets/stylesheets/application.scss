@@ -1,2 +1,5 @@
 @import "reset";
-@import "tops";
+@import "color";
+@import "devise/registrations.scss";
+@import "devise/sessions";
+@import "users-footer";

@@ -1,0 +1,23 @@
+.signIn-background
+  .signIn-main-box
+    .signIn-main-box__title
+      %h1 Photo
+    .signIn-main-box__form
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        =f.email_field :email, placeholder: "メールアドレス", class: "signIp-form-field"
+        =f.password_field :password, placeholder: "パスワード", class: "signIp-form-field"
+        =f.submit 'ログイン', class: "signIp-form-submit"
+  .signUp-box
+    .signUp-box__text
+      アカウントをお持ちでないですか？
+    .signUp-box__link
+      =link_to new_user_registration_path do
+        登録する
+  .download-items
+    %p ダウンロード
+    .item-icon
+      =link_to "#", class: "store-icon" do
+        =image_tag src="app-store.svg"
+      =link_to "#", class: "store-icon" do
+        =image_tag src="google-play.svg"
+= render 'shared/users-footer'
