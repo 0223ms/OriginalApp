@@ -3,8 +3,9 @@
   width: 100vw;
   background-color: $background;
   position: fixed;
+  display: none;
   .signIn-main-box{
-    width: 300px;
+    width: 380px;
     background-color: white;
     border: solid 0.5px #c9c9c9;
     margin: 40px auto 10px;
@@ -21,7 +22,7 @@
       margin-bottom: 20px;
       .signIp-form-field{
         height: 34px;
-        width: calc(100% - 20px);
+        width: 100%;
         margin-bottom: 8px;
         padding: 0 10px;
         background-color: #f7f5f5;
@@ -47,17 +48,17 @@
     }
   }
   .signUp-box{
-    width: 280px;
+    width: 380px;
     background-color: white;
     border: solid 0.5px #c9c9c9;
     margin: 10px auto;
     padding: 20px 50px;
     display: flex;
     &__text{
-      font-size: 14px;
+      font-size: 13px;
     }
     &__link{
-      font-size: 14px;
+      font-size: 13px;
       a{
         text-decoration: none;
         color: rgb(0, 170, 255);

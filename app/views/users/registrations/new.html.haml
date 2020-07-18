@@ -1,7 +1,7 @@
 .signUp-background
   .signUp-main-box
     .signUp-main-box__title
-      %h1 Photo
+      %h1#users-title-id Photo
     .signUp-main-box__heading-text
       %p 登録して友達の写真や動画をチェックしよう
     .signUp-main-box__form
@@ -32,7 +32,7 @@
     %p ダウンロード
     .item-icon
       =link_to "#", class: "store-icon" do
-        =image_tag src="app-store.svg"
+        =image_tag src="app-store.svg", class: "btn-app"
       =link_to "#", class: "store-icon" do
-        =image_tag src="google-play.svg"
-= render 'shared/users-footer'
+        =image_tag src="google-play.svg", class: "btn-google"
+= render 'shared/footer'
