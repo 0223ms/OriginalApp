@@ -1,0 +1,38 @@
+.signUp-background
+  .signUp-main-box
+    .signUp-main-box__title
+      %h1 Photo
+    .signUp-main-box__heading-text
+      %p 登録して友達の写真や動画をチェックしよう
+    .signUp-main-box__form
+      =form_with url: "#", local: true do |f|
+        =f.email_field :email, placeholder: "メールアドレス", class: "signUp-form-field"
+        =f.text_field :nickname, placeholder: "ニックネーム", class: "signUp-form-field"
+        =f.text_field :username, placeholder: "ユーザーネーム", class: "signUp-form-field"
+        =f.password_field :password, placeholder: "パスワード", class: "signUp-form-field", id: "signUp-form-password"
+        =f.submit '登録する', class: "signUp-form-submit"
+    .signUp-main-box__note
+      %span<> 登録することで、
+      =link_to "#" do
+        利用規約
+      %span<> 、
+      =link_to "#" do
+        データに関するポリシー
+      %span<> 、
+      =link_to "#" do
+        Cookieポリシー
+      %span<> に同意するものとします。
+  .signIn-box
+    .signIn-box__text
+      アカウントをお持ちですか？
+    .signIn-box__link
+      =link_to new_user_session_path do
+        ログインする
+  .download-items
+    %p ダウンロード
+    .item-icon
+      =link_to "#", class: "store-icon" do
+        =image_tag src="app-store.svg"
+      =link_to "#", class: "store-icon" do
+        =image_tag src="google-play.svg"
+= render 'shared/users-footer'

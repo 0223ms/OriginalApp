@@ -1,0 +1,95 @@
+.signUp-background{
+  height: 100vh;
+  width: 100vw;
+  background-color: $background;
+  position: fixed;
+  .signUp-main-box{
+    width: 300px;
+    background-color: white;
+    border: solid 0.5px #c9c9c9;
+    margin: 10px auto;
+    padding: 20px 40px;
+    &__title{
+      h1{
+        font-size: 50px;
+        font-family: 'Sacramento', cursive;
+        text-align: center;
+      }
+    }
+    &__heading-text{
+      p{
+        font-size: 18px;
+        font-weight: bold;
+        color: $form-font;
+        text-align: center;
+      }
+    }
+    &__form{
+      .signUp-form-field{
+        height: 34px;
+        width: calc(100% - 20px);
+        margin-bottom: 8px;
+        padding: 0 10px;
+        background-color: #f7f5f5;
+        font-size: 12px;
+        border: solid 1px #dfdfdf;
+        border-radius: 2px;
+        outline: none;
+      }
+      .signUp-form-field:focus{
+        border-color: #bbbbbb;
+      }
+      .signUp-form-submit{
+        height: 30px;
+        width: 100%;
+        margin-top: 10px;
+        background-color: rgb(0,140, 255);
+        color: $white;
+        font-size: 15px;
+        font-weight: bold;
+        border-radius: 4px;
+        border-style: none;
+      }
+    }
+    &__note{
+      margin: 20px 0;
+      font-size: 12px;
+      color: $form-font-note;
+      a{
+        text-decoration: none;
+        color: $form-font-note;
+        font-weight: bold;
+      }
+    }
+  }
+  .signIn-box{
+    width: 280px;
+    background-color: white;
+    border: solid 0.5px #c9c9c9;
+    margin: 10px auto;
+    padding: 20px 50px;
+    display: flex;
+    &__text{
+      font-size: 14px;
+    }
+    &__link{
+      font-size: 14px;
+      a{
+        text-decoration: none;
+        color: rgb(0, 170, 255);
+      }
+    }
+  }
+  .download-items{
+    width: 300px;
+    margin: 20px auto;
+    text-align: center;
+    p{
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
+    a{
+      text-decoration: none;
+    }
+  }
+}
