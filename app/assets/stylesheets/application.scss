@@ -1,5 +1,9 @@
 @import "reset";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 @import "color";
 @import "devise/registrations.scss";
 @import "devise/sessions";
-@import "footer";
+@import "shared/footer";
+@import "shared/header";
+@import "exhibitions";

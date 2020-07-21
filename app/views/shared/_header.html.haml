@@ -1,0 +1,18 @@
+.header-box
+  .header-inner
+    .header-inner__title
+      %h1 Phote
+    .header-inner__search
+      =form_with url: "#", local: true do
+        %label(for="header-search-id")
+          =icon('fa', 'search', class: "header-search-icon")
+          検索
+        =text_field :keyword, class: "header-search-field", id: "header-search-id"
+    .header-inner__options
+      .header-home
+        =icon('fa', 'home-alt', class: "header-home-icon")
+      .header-message
+        =icon('fa', 'paper-plane')
+      .header-compass
+      .header-like
+      .header-users
