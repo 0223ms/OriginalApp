@@ -1,18 +1,28 @@
 .header-box
   .header-inner
     .header-inner__title
-      %h1 Phote
+      =link_to "#" do
+        Phote
     .header-inner__search
-      =form_with url: "#", local: true do
+      =form_with url: "#", local: true do |f|
         %label(for="header-search-id")
-          =icon('fa', 'search', class: "header-search-icon")
-          検索
-        =text_field :keyword, class: "header-search-field", id: "header-search-id"
+          =icon('fa', 'search', class: "header-search-icon", id: "search-icon-id")
+          %span#search-text-id 検索
+        =f.text_field :keyword, class: "header-search-field", id: "header-search-id"
     .header-inner__options
       .header-home
-        =icon('fa', 'home-alt', class: "header-home-icon")
+        =link_to "#" do
+          =icon('far fa-bell', class: "header-home-icon")
       .header-message
-        =icon('fa', 'paper-plane')
+        =link_to "#" do
+          =icon('far fa-paper-plane', class: "header-message-icon")
       .header-compass
+        =link_to "#" do
+          =icon('far fa-compass', class: "header-compass-icon")
       .header-like
+        =link_to "#" do
+          =icon('far fa-heart', class: "header-like-icon")
       .header-users
+        =link_to "#" do
+          =icon('far fa-user-circle', class: "header-users-icon")
+.header-block

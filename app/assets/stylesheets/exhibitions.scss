@@ -1,0 +1,205 @@
+.exhibitions-background{
+  background-color: $background;
+  width: 100%;
+  .show-header-box{
+    height: 240px;
+    width: 800px;
+    // background-color: gray;
+    margin: 0 auto;
+    display: flex;
+    .show-header-image{
+      height: 100%;
+      width: 260px;
+      padding: 40px;
+      .user-image-box{
+        height: 140px;
+        width: 140px;
+        overflow: hidden;
+        border-radius: 50%;
+      }
+    }
+    .show-header-details{
+      .show-header-details-top{
+        height: 40px;
+        margin-top: 40px;
+        display: flex;
+        &__username{
+          font-size: 30px;
+          font-family: Ludica Sans Unicode;
+          color: $font-basic;
+        }
+        &__edit{
+          margin: 10px 0 0 30px;
+          .edit-btn{
+            a{
+              cursor: pointer;
+              padding: 4px 10px;
+              font-size: 14px;
+              background-color: transparent;
+              border: solid 1px $light-gray;
+              border-radius: 4px;
+              font-weight: bold;
+              color: $font-basic;
+              text-decoration: none;
+            }
+          }
+        }
+        &__option{
+          margin: 8px 0 0 30px;
+          .option-btn{
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            padding: 0;
+            appearance: none;
+            font-size: 26px;
+            color: $font-basic;
+          }
+          .gray-back{
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 10;
+            height: 100%;
+            width: 100%;
+            background-color: #000000a6;
+            display: none;
+          }
+          .option-menu{
+            position: fixed;
+            top: 180px;
+            left: 500px;
+            width: 400px;
+            border-radius: 10px;
+            background-color: $background;
+            display: none;
+            z-index: 15;
+            ul{
+              .option-list{
+                border-bottom: solid 1px $light-gray;
+                line-height: 80px;
+                text-align: center;
+                a{
+                  text-decoration: none;
+                  color: $font-basic;
+                }
+              }
+              .option-list-bottom{
+                line-height: 80px;
+                text-align: center;
+                button{
+                  font-size: 16px;
+                  color: $font-basic;
+                  background-color: transparent;
+                  border: none;
+                  cursor: pointer;
+                  outline: none;
+                  padding: 0;
+                  appearance: none;
+                }
+              }
+            }
+          }
+        }
+      }
+      .show-header-details-middle{
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        .post-length{
+          color: $font-basic;
+          font-weight: bold;
+          font-family: Ludica Sans Unicode;
+        }
+        .follower-length{
+          color: $font-basic;
+          font-weight: bold;
+          font-family: Ludica Sans Unicode;
+        }
+        .follow-length{
+          color: $font-basic;
+          font-weight: bold;
+          font-family: Ludica Sans Unicode;
+        }
+      }
+      .show-header-details-bottom{
+        margin-top: 20px;
+        span{
+          color: $font-basic;
+          font-size: 17px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  .show-main-box{
+    .show-main-inner{
+      width: 900px;
+      margin: 0 auto;
+      border-top: solid 1px $light-gray;
+      .show-main-lists{
+        display: flex;
+        justify-content: center;
+        .show-main-list{
+          font-size: 12px;
+          margin-right: 60px;
+          padding-top: 15px;
+          a{
+            text-decoration: none;
+            color: $form-font-note;
+          }
+          &__current{
+            font-size: 12px;
+            margin-right: 60px;
+            padding-top: 15px;
+            border-top: solid 1px rgb(66, 66, 66);
+            a{
+              font-weight: bold;
+              text-decoration: none;
+              color: $font-basic;
+            }
+          }
+        }
+      }
+      .show-main-none{
+        height: calc(100vh - 430px);
+        text-align: center;
+        padding-top: 60px;
+        .none-item-icon{
+          font-size: 36px;
+          margin-bottom: 16px;
+        }
+        .none-item-title{
+          font-size: 30px;
+          margin-bottom: 14px;
+        }
+        .none-item-text{
+          font-size: 14px;
+          margin-bottom: 20px;
+        }
+        .post-link{
+          text-decoration: none;
+          color: $background;
+          padding: 8px 40px;
+          border-radius: 4px;
+          background-color: #02a1fd;
+        }
+      }
+      .show-main-posts{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 30px;
+        .show-main-post{
+          margin-bottom: 30px;
+          &__image{
+            height: 280px;
+            width: 280px;
+          }
+        }
+      }
+    }
+  }
+}
