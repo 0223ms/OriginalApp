@@ -3,6 +3,8 @@ Rails.application.routes.draw do
     :registrations => 'users/registrations',
     :sessions => 'users/sessions'
   }
+  
+  root "tops#index"
 
   resources :exhibitions, only: [:index] do
     collection do
@@ -10,6 +12,5 @@ Rails.application.routes.draw do
       get :tag_post
     end
   end
-  root "tops#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
