@@ -6,27 +6,38 @@
     .show-header-details-top
       .show-header-details-top__username
         %span username
-      .show-header-details-top__edit
-        .edit-btn
-          =link_to "#" do
-            プロフィールを編集
-      .show-header-details-top__option
+      -# -if params(:id) = current_user
+      -#   .show-header-details-top__edit
+      -#     .edit-btn
+      -#       =link_to "#" do
+      -#         プロフィールを編集
+      -#   .show-header-details-top__option
+      -#     %button.option-btn
+      -#       =icon('fas fa-cog', class: "option-btn-icon")
+      -#     .gray-back
+      -#     .option-menu
+      -#       %ul
+      -#         %li.option-list 
+      -#           =link_to "#" do
+      -#             パスワードの変更
+      -#         %li.option-list
+      -#           =link_to "#" do
+      -#             問題を報告
+      -#         %li.option-list
+      -#           =link_to "#" do
+      -#             ログアウト
+      -#         %li.option-list-bottom
+      -#           %button.cancle-btn キャンセル
+      -# -else
+      .show-header-details-top__follow
+        -# %button.follow-btn
+        -#   フォローする
+        =link_to "#", class: "follow-message-btn" do
+          メッセージを送信
+        %button.follow-cancel-btn
+          =icon('fas fa-user-check', class: "follow-cancel-icon")
         %button.option-btn
-          =icon('fas fa-cog', class: "option-btn-icon")
-        .gray-back
-        .option-menu
-          %ul
-            %li.option-list 
-              =link_to "#" do
-                パスワードの変更
-            %li.option-list
-              =link_to "#" do
-                問題を報告
-            %li.option-list
-              =link_to "#" do
-                ログアウト
-            %li.option-list-bottom
-              %button.cancle-btn キャンセル
+          =icon('fas fa-ellipsis-h', class: "option-btn-icon")
     .show-header-details-middle
       .post-length
         %span 投稿０件

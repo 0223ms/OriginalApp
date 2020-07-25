@@ -23,8 +23,9 @@
           投稿リスト
         .none-item-text
           写真や動画を投稿すると、ここに表示されます。
-        =link_to "#", class: "post-link" do
-          %span 投稿する
+        -# -if params(:id) = current_user
+          -# =link_to "#", class: "post-link" do
+          -#   %span 投稿する
       -# .show-main-posts
         -# .show-main-post
         -#   =link_to "#" do
