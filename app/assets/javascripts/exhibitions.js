@@ -8,9 +8,13 @@ $(document).on('turbolinks:load', function(){
       $(".gray-back").fadeOut("show")
       $(".option-menu").fadeOut("show")
     })
-    $(".cancle-btn").on("click", function(){
+    $(".cancel-btn").on("click", function(){
       $(".gray-back").fadeOut("show")
       $(".option-menu").fadeOut("show")
+    })
+    $(".option-btn-other").on("click", function(){
+      $(".gray-back").fadeIn("show")
+      $(".option-menu").fadeIn("show")
     })
   });
 });
