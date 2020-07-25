@@ -1,0 +1,28 @@
+= render 'shared/header'
+.exhibitions-background
+  = render 'show-top'
+  .show-main-box
+    .show-main-inner
+      %ul.show-main-lists
+        %li.show-main-list
+          =link_to exhibitions_path do
+            =icon('fas fa-table', class: "lists-icon")
+            %span 投稿
+        %li.show-main-list__current
+          =link_to save_post_exhibitions_path do
+            =icon('far fa-bookmark', class: "lists-icon")
+            %span 保存済み
+        %li.show-main-list
+          =link_to tag_post_exhibitions_path do
+            =icon('far fa-id-card', class: "lists-icon")
+            %span タグ付けさせている人
+      .show-main-none
+        .none-item-icon
+          =icon('far fa-bookmark', class: "posts-icon")
+        %h1.none-item-title
+          保存する
+        .none-item-text
+          %p 後でもう一度見たい写真や動画を保存できます。保存した
+          %p ことが他の人に通知されることはなく、そのコンテンツも
+          %p 他の人には表示されません。
+= render 'shared/footer'

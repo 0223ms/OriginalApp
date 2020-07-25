@@ -1,0 +1,96 @@
+.header-box{
+  height: 54px;
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  border-bottom: solid 1px rgb(223, 223, 223);
+  .header-inner{
+    width: 1000px;
+    height: 100%;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 8px 0 8px;
+    display: flex;
+    justify-content: space-between;
+    &__title{
+      a{
+        font-family: 'Sacramento', cursive;
+        font-size: 28px;
+        font-weight: bold;
+        text-decoration: none;
+        color: rgb(29, 29, 29);
+      }
+    }
+    &__search{
+      width: 200px;
+      height: 28px;
+      margin: auto 0 auto 120px ;
+      position: relative;
+      label{
+        position: absolute;
+        top: 2px;
+        left: 70px;
+        z-index: 1;
+        color: $form-font-note;
+        .header-search-icon{
+          font-size: 12px;
+        }
+        #search-text-id{
+          font-size: 14px;
+        }
+      }
+      .header-search-field{
+        height: 100%;
+        width: 100%;
+        padding: 0 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: solid 1px $light-gray;
+        border-radius: 2px;
+        outline: none;
+      }
+    }
+    &__options{
+      display: flex;
+      .header-home{
+        font-size: 24px;
+        a{
+          color: rgb(54, 54, 54);
+        }
+      }
+      .header-message{
+        font-size: 24px;
+        margin-left: 20px;
+        a{
+          color: rgb(54, 54, 54);
+        }
+      }
+      .header-compass{
+        font-size: 24px;
+        margin-left: 20px;
+        a{
+          color: rgb(54, 54, 54);
+        }
+      }
+      .header-like{
+        font-size: 24px;
+        margin-left: 20px;
+        a{
+          color: rgb(54, 54, 54);
+        }
+      }
+      .header-users{
+        font-size: 24px;
+        margin-left: 20px;
+        a{
+          color: rgb(54, 54, 54);
+        }
+      }
+    }
+  }
+}
+.header-block{
+  height: 54px;
+  width: 100%;
+}

@@ -1,7 +1,7 @@
 .signIn-background
   .signIn-main-box
     .signIn-main-box__title
-      %h1 Photo
+      %h1#users-title-id Photo
     .signIn-main-box__form
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
         =f.email_field :email, placeholder: "メールアドレス", class: "signIp-form-field"
@@ -17,7 +17,7 @@
     %p ダウンロード
     .item-icon
       =link_to "#", class: "store-icon" do
-        =image_tag src="app-store.svg"
+        =image_tag src="app-store.svg", class: "btn-app"
       =link_to "#", class: "store-icon" do
-        =image_tag src="google-play.svg"
-= render 'shared/users-footer'
+        =image_tag src="google-play.svg", class: "btn-google"
+= render 'shared/footer'

@@ -1,8 +1,10 @@
 @import "reset";
-@import "tops";
-@import 'font-awesome-sprockets';
-@import 'font-awesome';
+@import "font-awesome-sprockets";
+@import "font-awesome";
 @import "color";
 @import "devise/registrations.scss";
 @import "devise/sessions";
-@import "users-footer";
+@import "shared/footer";
+@import "shared/header";
+@import "exhibitions";
+@import "tops";

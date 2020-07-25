@@ -1,0 +1,38 @@
+.show-header-box
+  .show-header-image
+    .user-image-box
+      =image_tag src="user1.png", size: "140"
+  .show-header-details
+    .show-header-details-top
+      .show-header-details-top__username
+        %span username
+      .show-header-details-top__edit
+        .edit-btn
+          =link_to "#" do
+            プロフィールを編集
+      .show-header-details-top__option
+        %button.option-btn
+          =icon('fas fa-cog', class: "option-btn-icon")
+        .gray-back
+        .option-menu
+          %ul
+            %li.option-list 
+              =link_to "#" do
+                パスワードの変更
+            %li.option-list
+              =link_to "#" do
+                問題を報告
+            %li.option-list
+              =link_to "#" do
+                ログアウト
+            %li.option-list-bottom
+              %button.cancle-btn キャンセル
+    .show-header-details-middle
+      .post-length
+        %span 投稿０件
+      .follower-length
+        %span フォロワー0人
+      .follow-length
+        %span フォロー0人
+    .show-header-details-bottom
+      %span ニックネーム
