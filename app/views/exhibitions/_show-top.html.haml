@@ -27,7 +27,7 @@
       -#           =link_to "#" do
       -#             ログアウト
       -#         %li.option-list-bottom
-      -#           %button.cancle-btn キャンセル
+      -#           %button.cancel-btn キャンセル
       -# -else
       .show-header-details-top__follow
         -# %button.follow-btn
@@ -36,8 +36,22 @@
           メッセージを送信
         %button.follow-cancel-btn
           =icon('fas fa-user-check', class: "follow-cancel-icon")
-        %button.option-btn
+        %button.option-btn-other
           =icon('fas fa-ellipsis-h', class: "option-btn-icon")
+        .gray-back
+        .option-menu
+          %ul
+            %li.option-list-red
+              =link_to "#" do
+                このユーザーをブロック
+            %li.option-list-red
+              =link_to "#" do
+                制限する
+            %li.option-list-red
+              =link_to "#" do
+                ユーザーを報告
+            %li.option-list-bottom
+              %button.cancel-btn キャンセル
     .show-header-details-middle
       .post-length
         %span 投稿０件
