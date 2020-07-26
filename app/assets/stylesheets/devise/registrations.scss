@@ -1,14 +1,14 @@
 .signUp-background{
-  height: 100vh;
+  height: calc(100vh - 100px);
   width: 100vw;
   background-color: $background;
-  position: fixed;
   display: none;
+  padding-top: 10px;
   .signUp-main-box{
     width: 380px;
     background-color: white;
     border: solid 0.5px #c9c9c9;
-    margin: 10px auto;
+    margin: 0 auto;
     padding: 20px 40px;
     &__title{
       h1{
