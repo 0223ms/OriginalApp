@@ -10,6 +10,12 @@ Rails.application.routes.draw do
       get :tag_post
     end
   end
+  resources :profiles, only: [:index] do
+    collection do
+      get :edit_password
+    end
+  end
+
   root "tops#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
