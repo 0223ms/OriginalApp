@@ -334,7 +334,7 @@ DEPENDENCIES
   devise
   erb2haml
   fog-aws
-  font-awesome-sass (~> 5.4.1)
+  font-awesome-sass
   haml-rails
   jbuilder (~> 2.5)
   jquery-rails
