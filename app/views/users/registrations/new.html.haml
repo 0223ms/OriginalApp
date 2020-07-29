@@ -7,7 +7,6 @@
     .signUp-main-box__form
       =form_with model: @user, url: {controller: "registrations", action: "create"}, local: true do |f|
         = devise_error_messages
-        -# = render "devise/shared/error_messages", resource: @user
         =f.email_field :email, placeholder: "メールアドレス", class: "signUp-form-field"
         =f.text_field :nickname, placeholder: "ニックネーム", class: "signUp-form-field"
         =f.text_field :username, placeholder: "ユーザーネーム", class: "signUp-form-field"

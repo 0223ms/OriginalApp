@@ -32,7 +32,7 @@ class User < ApplicationRecord
 
   validates :password, confirmation: true
   devise :validatable, password_length: 6..128
-  validates :username,    presence: true
+  validates :username,    presence: true, uniqueness: true
   validates :nickname,    presence: true
   validates :email,       presence: true
   validates :password,    presence: true
