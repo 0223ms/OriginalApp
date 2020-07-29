@@ -4,7 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  belongs_to :profile, dependent: :destroy
   has_many :messages
   has_many :comments
   has_many :rooms, dependent: :destroy
@@ -31,9 +30,10 @@ class User < ApplicationRecord
     passive_follows.find_by(following_id: user.id).present?
   end
 
+  validates :password, confirmation: true
+  devise :validatable, password_length: 6..128
   validates :username,    presence: true
   validates :nickname,    presence: true
   validates :email,       presence: true
-  validates :phonenumber, presence: true
   validates :password,    presence: true
 end
