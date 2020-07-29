@@ -5,7 +5,8 @@
     .signUp-main-box__heading-text
       %p 登録して友達の写真や動画をチェックしよう
     .signUp-main-box__form
-      =form_with url: "#", local: true do |f|
+      =form_with model: @user, url: {controller: "registrations", action: "create"}, local: true do |f|
+        = devise_error_messages
         =f.email_field :email, placeholder: "メールアドレス", class: "signUp-form-field"
         =f.text_field :nickname, placeholder: "ニックネーム", class: "signUp-form-field"
         =f.text_field :username, placeholder: "ユーザーネーム", class: "signUp-form-field"

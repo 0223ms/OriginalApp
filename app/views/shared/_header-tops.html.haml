@@ -39,6 +39,6 @@
         =icon('fas fa-cog', class: "notification-icon")
         %span 設定
     %li.notification-list-bottom
-      =link_to "#" do
+      =link_to destroy_user_session_path, method: :delete do
         %span ログアウト
 .header-block
