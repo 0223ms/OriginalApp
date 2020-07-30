@@ -1,0 +1,44 @@
+.header-box
+  .header-inner
+    .header-inner__title
+      =link_to root_path do
+        Phote
+    .header-inner__search
+      =form_with url: "#", local: true do |f|
+        %label(for="header-search-id")
+          =icon('fa', 'search', class: "header-search-icon", id: "search-icon-id")
+          %span#search-text-id 検索
+        =f.text_field :keyword, class: "header-search-field", id: "header-search-id"
+    .header-inner__options
+      .header-home
+        =link_to root_path do
+          =icon('fas fa-bell', class: "header-home-icon")
+      .header-message
+        =link_to messages_path do
+          =icon('far fa-paper-plane', class: "header-message-icon")
+      .header-compass
+        =link_to "#" do
+          =icon('far fa-compass', class: "header-compass-icon")
+      .header-like
+        =link_to "#" do
+          =icon('far fa-heart', class: "header-like-icon")
+      %button.header-users
+        =icon('far fa-user-circle', class: "header-users-icon")
+.header-users-notification
+  %ul
+    %li.notification-list
+      =link_to exhibitions_path do
+        =icon('far fa-user-circle', class: "notification-icon")
+        %span プロフィール
+    %li.notification-list
+      =link_to save_post_exhibitions_path do
+        =icon('far fa-bookmark', class: "notification-icon")
+        %span 保存済み
+    %li.notification-list
+      =link_to profiles_path do
+        =icon('fas fa-cog', class: "notification-icon")
+        %span 設定
+    %li.notification-list-bottom
+      =link_to destroy_user_session_path, method: :delete do
+        %span ログアウト
+.header-block

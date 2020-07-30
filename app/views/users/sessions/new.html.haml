@@ -4,6 +4,7 @@
       %h1#users-title-id Photo
     .signIn-main-box__form
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        = devise_error_messages
         =f.email_field :email, placeholder: "メールアドレス", class: "signIp-form-field"
         =f.password_field :password, placeholder: "パスワード", class: "signIp-form-field"
         =f.submit 'ログイン', class: "signIp-form-submit"
