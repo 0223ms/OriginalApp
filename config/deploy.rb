@@ -26,13 +26,15 @@ set :keep_releases, 5
 
 # set :linked_files, fetch(:linked_files, []).push("config/master.key")
 
+
+
 # デプロイ処理が終わった後、Unicornを再起動するための記述
 after 'deploy:publishing', 'deploy:restart'
 namespace :deploy do
   task :restart do
     invoke 'unicorn:restart'
   end
-end
+
   desc 'upload credentials.yml.enc'
   task :upload do
     on roles(:app) do |host|
