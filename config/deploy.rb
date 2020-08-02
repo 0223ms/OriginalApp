@@ -25,6 +25,8 @@ set :unicorn_config_path, -> { "#{current_path}/config/unicorn.rb" }
 set :keep_releases, 5
 
 # set :linked_files, fetch(:linked_files, []).push("config/master.key")
+set :linked_files, %w{ config/master.key }
+
 
 
 
