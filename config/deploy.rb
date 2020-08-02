@@ -51,7 +51,7 @@
 lock "~> 3.14.1"
 
 set :application, "OriginalApp"
-set :repo_url, "git@github.com:YutoHoshino/OriginalApp.git"
+set :repo_url, "git@github.com:0223ms/OriginalApp.git"
 
 
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
