@@ -1,36 +1,72 @@
-%h2
-  Edit #{resource_name.to_s.humanize}
-= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
-  = render "users/shared/error_messages", resource: resource
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  - if devise_mapping.confirmable? && resource.pending_reconfirmation?
-    %div
-      Currently waiting confirmation for: #{resource.unconfirmed_email}
-  .field
-    = f.label :password
-    %i (leave blank if you don't want to change it)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-    - if @minimum_password_length
-      %br/
-      %em
-        = @minimum_password_length
-        characters minimum
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .field
-    = f.label :current_password
-    %i (we need your current password to confirm your changes)
-    %br/
-    = f.password_field :current_password, autocomplete: "current-password"
-  .actions
-    = f.submit "Update"
-%h3 Cancel my account
-%p
-  Unhappy? #{button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete}
-= link_to "Back", :back
+= render 'shared/header-profiles'
+
+.profiles-background
+  .profiles-inner
+    .side-contents
+      %ul
+        %li.current
+          =link_to edit_user_registration_path do
+            プロフィールを編集
+        %li
+          =link_to edit_password_path do
+            パスワードを変更
+    .profiles-edit-box
+      = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+        .profiles-edit-box__heading
+          .profiles-edit-box__heading__left-content
+            .user-image-box
+              -if current_user.image?
+                %label(for="image-edit-id")
+                  =image_tag @current_user.image.url, class: "user-image"
+              -else
+                %label(for="image-edit-id")
+                  =image_tag src="user1.png", class: "user-image"
+          .profiles-edit-box__heading__right-content
+            .username
+              =current_user.username
+            .image-edit
+              .image-edit__button
+                =f.file_field :image, id: "image-edit-id",style: "display: none;"
+                %label(for="image-edit-id") プロフィール写真を変更
+        = devise_error_messages
+        .profiles-edit-box__contents
+          .profiles-edit-box__contents__text
+            %p 名前
+          .profiles-edit-box__contents__form
+            =f.text_field :nickname, placeholder: "名前", class: "edit-form"
+            .addendum
+              %p 周りから知られている名前(氏名、ニックネーム、ビジネス名)を使用すると、他の人があなたのアカウントを見つけやすくなります。
+        .profiles-edit-box__contents
+          .profiles-edit-box__contents__text
+            %p ユーザーネーム
+          .profiles-edit-box__contents__form
+            =f.text_field :username, placeholder: "ユーザーネーム", class: "edit-form"
+        .profiles-edit-box__contents
+          .profiles-edit-box__contents__text
+            %p 自己紹介
+          .profiles-edit-box__contents__form
+            =f.text_area :text, class: "edit-form__area"
+        .profiles-edit-box__contents
+          .profiles-edit-box__contents__text
+            %p メールアドレス
+          .profiles-edit-box__contents__form
+            =f.email_field :email, placeholder: "メールアドレス", autocomplete: "email", class: "edit-form"
+        .profiles-edit-box__contents
+          .profiles-edit-box__contents__text
+            %p 電話番号
+          .profiles-edit-box__contents__form
+            =f.text_field :phonenumber, placeholder: "電話番号", class: "edit-form"
+        .profiles-edit-box__contents
+          .profiles-edit-box__contents__text
+            %p 性別
+          .profiles-edit-box__contents__check
+            =f.radio_button :gender, "男", id: "content-radio-button-man"
+            %label(for="content-radio-button-man") 男
+            =f.radio_button :gender, "女", id: "content-radio-button-woman"
+            %label(for="content-radio-button-woman") 女
+            =f.radio_button :gender, "その他", id: "content-radio-button-other"
+            %label(for="content-radio-button-other") その他
+        .profiles-edit-box__submit
+          = f.submit "送信する", class: "edit-submit"
+
+= render 'shared/footer'

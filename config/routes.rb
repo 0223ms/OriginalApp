@@ -3,16 +3,15 @@ Rails.application.routes.draw do
     :registrations => 'users/registrations',
     :sessions => 'users/sessions'
   }
+  devise_scope :user do
+    get 'edit_password', to: 'users/registrations#edit_password'
+    post 'update_password', to: 'users/registrations#update_password'
+  end
 
-  resources :exhibitions, only: [:index] do
-    collection do
+  resources :exhibitions, only: [:show] do
+    member do
       get :save_post
       get :tag_post
-    end
-  end
-  resources :profiles, only: [:index] do
-    collection do
-      get :edit_password
     end
   end
 

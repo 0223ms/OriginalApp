@@ -27,15 +27,15 @@
 .header-users-notification
   %ul
     %li.notification-list
-      =link_to exhibitions_path do
+      =link_to exhibition_path(id: current_user.id) do
         =icon('far fa-user-circle', class: "notification-icon")
         %span プロフィール
     %li.notification-list
-      =link_to save_post_exhibitions_path do
+      =link_to save_post_exhibition_path(id: current_user.id) do
         =icon('far fa-bookmark', class: "notification-icon")
         %span 保存済み
     %li.notification-list
-      =link_to profiles_path do
+      =link_to edit_user_registration_path do
         =icon('fas fa-cog', class: "notification-icon")
         %span 設定
     %li.notification-list-bottom
