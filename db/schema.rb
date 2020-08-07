@@ -98,7 +98,7 @@ ActiveRecord::Schema.define(version: 2020_07_22_022955) do
     t.integer "phonenumber"
     t.string "gender"
     t.text "text"
-    t.string "image", default: "user1.png"
+    t.string "image"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

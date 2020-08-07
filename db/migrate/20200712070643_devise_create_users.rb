@@ -11,7 +11,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.integer :phonenumber
       t.string :gender
       t.text :text
-      t.string :image,              default: "user1.png"
+      t.string :image
 
       ## Recoverable
       t.string   :reset_password_token

@@ -4,6 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  mount_uploader :image, ImageUploader
+
   has_many :messages
   has_many :comments
   has_many :rooms, dependent: :destroy
@@ -35,5 +37,4 @@ class User < ApplicationRecord
   validates :username,    presence: true, uniqueness: true
   validates :nickname,    presence: true
   validates :email,       presence: true
-  validates :password,    presence: true
 end
